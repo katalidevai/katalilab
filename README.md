@@ -20,6 +20,15 @@ It supports two model families through one driver:
 
 Performance scales with storage speed — an NVMe-backed pack streams experts noticeably faster than a SATA one, since expert weights are pulled from disk on demand rather than fully preloaded.
 
+## Tested with
+
+Katali Lab has been run end-to-end against real, large MoE checkpoints, including:
+
+- **GLM-5.3-Flash** (~167 GB pack)
+- **Qwen3-235B-A22B** and **Qwen3-30B-A3B**
+
+Both families load their EQS1 pack, stream experts from disk, and produce coherent answers on ordinary prompts (e.g. "What is the capital of the Philippines?" → "The capital of the Philippines is **Manila**."). Generation speed varies a lot with hardware, mainly disk speed for the expert stream and available RAM for the cache — a big pack on an NVMe drive is noticeably faster than the same pack on a SATA drive.
+
 ## Contents
 
 - `katali-lab.exe` — CLI: `inspect` (open a pack), `bench` (stream expert blocks), `run` (generate), `verify` (static layout/shape checks)
