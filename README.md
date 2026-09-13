@@ -29,6 +29,13 @@ Katali Lab has been run end-to-end against real, large MoE checkpoints, includin
 
 Both families load their EQS1 pack, stream experts from disk, and produce coherent answers on ordinary prompts (e.g. "What is the capital of the Philippines?" → "The capital of the Philippines is **Manila**."). Generation speed varies a lot with hardware, mainly disk speed for the expert stream and available RAM for the cache — a big pack on an NVMe drive is noticeably faster than the same pack on a SATA drive.
 
+## Models
+
+EQS packs are hosted on Hugging Face: **[huggingface.co/katalidevai](https://huggingface.co/katalidevai)**
+
+- [Qwen3-30B-A3B (Katali Lab EQS, q4)](https://huggingface.co/katalidevai/qwen3-30b-katali-lab-eqs) — ~17 GB, ready to download and run
+- GLM-5.3-Flash and Qwen3-235B-A22B packs are too large to host (167 GB+) and are not published; convert your own with the packing tools if you need them
+
 ## Contents
 
 - `katali-lab.exe` — CLI: `inspect` (open a pack), `bench` (stream expert blocks), `run` (generate), `verify` (static layout/shape checks)
