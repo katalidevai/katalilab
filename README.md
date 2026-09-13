@@ -36,9 +36,17 @@ Both families load their EQS1 pack, stream experts from disk, and produce cohere
 
 ## Quick start
 
+In PowerShell (the default on Windows 11), prefix with `.\` to run from the current folder:
+
+```
+.\katali-lab.exe --help
+.\katali-lab.exe run --model PATH_TO_PACK -p "Hi" --n 32 --verbose
+```
+
+In Command Prompt (cmd.exe), the plain name works too:
+
 ```
 katali-lab.exe --help
-katali-lab.exe run --model PATH_TO_PACK -p "Hi" --n 32 --verbose
 ```
 
 Or just double-click `katali-lab-chat.exe`, point it at a model pack directory, and start chatting.
