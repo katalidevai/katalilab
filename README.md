@@ -34,7 +34,8 @@ Both families load their EQS1 pack, stream experts from disk, and produce cohere
 EQS packs are hosted on Hugging Face: **[huggingface.co/katalidevai](https://huggingface.co/katalidevai)**
 
 - [Qwen3-30B-A3B (Katali Lab EQS, q4)](https://huggingface.co/katalidevai/qwen3-30b-katali-lab-eqs) — ~17 GB, ready to download and run
-- GLM-5.3-Flash and Qwen3-235B-A22B packs are too large to host (167 GB+) and are not published. A standalone converter to build your own EQS pack from a checkpoint is planned but not released yet.
+- [Qwen3-235B-A22B (Katali Lab EQS, q4)](https://huggingface.co/katalidevai/qwen3-235b-katali-lab-q4) — ~136 GB, ready to download and run
+- GLM-5.3-Flash pack is too large to host (167 GB+) and is not published. A standalone converter to build your own EQS pack from a checkpoint is planned but not released yet.
 
 ## Contents
 
